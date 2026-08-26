@@ -2,10 +2,38 @@ import { ArrowLeft, Download, Maximize2, RotateCcw, Zap, Layers, Box } from "luc
 import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense, Component, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ThreeModelViewer = lazy(() => import("@/components/ThreeModelViewer"));
+
+interface ErrorBoundaryProps {
+  fallback: ReactNode;
+  children: ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+class ModelErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  public state: ErrorBoundaryState = { hasError: false };
+
+  public static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  public componentDidCatch(error: Error) {
+    console.warn("3D Model load error, falling back to image:", error);
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
 
 interface Subpart {
   id: string;
@@ -184,9 +212,31 @@ export default function CaseStudy() {
               <div className="space-y-6">
                 <div className="relative h-[500px] md:h-[600px] bg-gradient-to-br from-card to-background rounded-xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
                   {activeModel ? (
-                    <Suspense fallback={<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DC2626]"></div>}>
-                      <ThreeModelViewer modelUrl={`${import.meta.env.BASE_URL}projects/${caseStudyId}/models/${activeModel}`} />
-                    </Suspense>
+                    <ModelErrorBoundary
+                      key={activeModel}
+                      fallback={
+                        caseStudy.image ? (
+                          <img
+                            src={caseStudy.image.startsWith('/') ? `${import.meta.env.BASE_URL}${caseStudy.image.slice(1)}` : caseStudy.image}
+                            alt={caseStudy.title}
+                            className="w-full h-full object-cover mix-blend-multiply"
+                          />
+                        ) : (
+                          <div className="text-center space-y-4">
+                            <div className="w-24 h-24 mx-auto bg-[#DC2626]/10 rounded-lg flex items-center justify-center border border-[#DC2626]/20">
+                              <Box className="w-12 h-12 text-[#DC2626]" />
+                            </div>
+                            <p className="text-foreground/60 text-sm font-medium">
+                              Interactive 3D CAD Viewer
+                            </p>
+                          </div>
+                        )
+                      }
+                    >
+                      <Suspense fallback={<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DC2626]"></div>}>
+                        <ThreeModelViewer modelUrl={`${import.meta.env.BASE_URL}projects/${caseStudyId}/models/${activeModel}`} />
+                      </Suspense>
+                    </ModelErrorBoundary>
                   ) : caseStudy.image ? (
                     <img
                       src={caseStudy.image.startsWith('/') ? `${import.meta.env.BASE_URL}${caseStudy.image.slice(1)}` : caseStudy.image}
