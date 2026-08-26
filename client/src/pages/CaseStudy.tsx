@@ -86,7 +86,7 @@ export default function CaseStudy() {
       <div className="min-h-screen flex flex-col bg-background text-foreground">
         <Header />
         <main className="flex-1 container py-20 flex justify-center items-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#C17A45]"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DC2626]"></div>
         </main>
         <Footer />
       </div>
@@ -103,7 +103,7 @@ export default function CaseStudy() {
           </h1>
           <button
             onClick={() => navigate("/#projects")}
-            className="inline-flex items-center gap-2 text-[#C17A45] hover:text-[#B5651D] font-semibold"
+            className="inline-flex items-center gap-2 text-[#DC2626] hover:text-[#B91C1C] font-semibold"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Projects
@@ -123,7 +123,7 @@ export default function CaseStudy() {
         <div className="container pt-8 pb-4">
           <button
             onClick={() => navigate("/#projects")}
-            className="inline-flex items-center gap-2 text-[#C17A45] hover:text-[#B5651D] font-semibold transition-colors"
+            className="inline-flex items-center gap-2 text-[#DC2626] hover:text-[#B91C1C] font-semibold transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Projects
@@ -131,10 +131,10 @@ export default function CaseStudy() {
         </div>
 
         {/* Hero Banner */}
-        <section className="bg-gradient-to-r from-[#C17A45]/10 to-[#4A5A6A]/10 py-12 border-b border-border">
+        <section className="bg-gradient-to-r from-[#DC2626]/10 to-[#4A5A6A]/10 py-12 border-b border-border">
           <div className="container">
             <div className="space-y-4">
-              <span className="inline-block px-3 py-1 bg-[#C17A45]/10 text-[#C17A45] text-xs font-semibold rounded-full">
+              <span className="inline-block px-3 py-1 bg-[#DC2626]/10 text-[#DC2626] text-xs font-semibold rounded-full">
                 {caseStudy.category}
               </span>
               <h1 className="text-5xl font-bold text-foreground">
@@ -184,7 +184,7 @@ export default function CaseStudy() {
               <div className="space-y-6">
                 <div className="relative h-[500px] md:h-[600px] bg-gradient-to-br from-card to-background rounded-xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
                   {activeModel ? (
-                    <Suspense fallback={<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#C17A45]"></div>}>
+                    <Suspense fallback={<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DC2626]"></div>}>
                       <ThreeModelViewer modelUrl={`${import.meta.env.BASE_URL}projects/${caseStudyId}/models/${activeModel}`} />
                     </Suspense>
                   ) : caseStudy.image ? (
@@ -195,8 +195,8 @@ export default function CaseStudy() {
                     />
                   ) : (
                     <div className="text-center space-y-4">
-                      <div className="w-24 h-24 mx-auto bg-[#C17A45]/10 rounded-lg flex items-center justify-center border border-[#C17A45]/20">
-                        <Box className="w-12 h-12 text-[#C17A45]" />
+                      <div className="w-24 h-24 mx-auto bg-[#DC2626]/10 rounded-lg flex items-center justify-center border border-[#DC2626]/20">
+                        <Box className="w-12 h-12 text-[#DC2626]" />
                       </div>
                       <p className="text-foreground/60 text-sm font-medium">
                         Interactive 3D CAD Viewer
@@ -211,8 +211,8 @@ export default function CaseStudy() {
                     onClick={handleToggleSubparts}
                     className={`w-full py-4 px-6 rounded-xl border-2 font-bold transition-all flex items-center justify-center gap-3 ${
                       showSubparts 
-                        ? "bg-[#C17A45] border-[#C17A45] text-white shadow-md hover:bg-[#B5651D]" 
-                        : "bg-card border-border text-foreground hover:border-[#C17A45] hover:text-[#C17A45]"
+                        ? "bg-[#DC2626] border-[#DC2626] text-white shadow-md hover:bg-[#B91C1C]" 
+                        : "bg-card border-border text-foreground hover:border-[#DC2626] hover:text-[#DC2626]"
                     }`}
                   >
                     <Layers className="w-5 h-5" />
@@ -223,7 +223,7 @@ export default function CaseStudy() {
                 {/* Commands Used */}
                 <div className="bg-card/40 p-6 rounded-xl border border-border">
                   <div className="flex items-center gap-3 mb-6">
-                    <Zap className="w-5 h-5 text-[#C17A45]" />
+                    <Zap className="w-5 h-5 text-[#DC2626]" />
                     <h2 className="text-xl font-bold text-foreground">
                       Commands & Techniques
                     </h2>
@@ -261,7 +261,7 @@ export default function CaseStudy() {
                           <ul className="space-y-2">
                             {(caseStudy.objectives || []).map((obj, idx) => (
                               <li key={idx} className="flex gap-3 text-foreground/80 text-sm">
-                                <span className="text-[#C17A45] font-bold mt-0.5">✓</span>
+                                <span className="text-[#DC2626] font-bold mt-0.5">✓</span>
                                 <span>{obj}</span>
                               </li>
                             ))}
@@ -272,7 +272,7 @@ export default function CaseStudy() {
                           <ul className="space-y-2">
                             {(caseStudy.requirements || []).map((req, idx) => (
                               <li key={idx} className="flex gap-3 text-foreground/80 text-sm">
-                                <span className="text-[#C17A45] font-bold mt-0.5">→</span>
+                                <span className="text-[#DC2626] font-bold mt-0.5">→</span>
                                 <span>{req}</span>
                               </li>
                             ))}
@@ -295,7 +295,7 @@ export default function CaseStudy() {
                           <ul className="space-y-2">
                             {(caseStudy.constraints || []).map((constraint, idx) => (
                               <li key={idx} className="text-sm text-foreground/80 flex items-start gap-2">
-                                <span className="text-[#C17A45]">•</span> {constraint}
+                                <span className="text-[#DC2626]">•</span> {constraint}
                               </li>
                             ))}
                           </ul>
@@ -305,7 +305,7 @@ export default function CaseStudy() {
                           <ul className="space-y-2">
                             {(caseStudy.metrics || []).map((metric, idx) => (
                               <li key={idx} className="text-sm text-foreground/80 flex items-start gap-2">
-                                <span className="text-[#C17A45]">•</span> {metric}
+                                <span className="text-[#DC2626]">•</span> {metric}
                               </li>
                             ))}
                           </ul>
@@ -319,7 +319,7 @@ export default function CaseStudy() {
                           <ul className="space-y-2">
                             {(caseStudy.challenges || []).map((challenge, idx) => (
                               <li key={idx} className="flex gap-3 text-foreground/80 text-sm">
-                                <span className="text-[#C17A45] font-bold">!</span>
+                                <span className="text-[#DC2626] font-bold">!</span>
                                 <span>{challenge}</span>
                               </li>
                             ))}
@@ -330,7 +330,7 @@ export default function CaseStudy() {
                           <ul className="space-y-2">
                             {(caseStudy.lessonsLearned || []).map((lesson, idx) => (
                               <li key={idx} className="flex gap-3 text-foreground/80 text-sm">
-                                <span className="text-[#C17A45] font-bold">★</span>
+                                <span className="text-[#DC2626] font-bold">★</span>
                                 <span>{lesson}</span>
                               </li>
                             ))}
@@ -349,7 +349,7 @@ export default function CaseStudy() {
                       className="space-y-4"
                     >
                       <div className="flex items-center gap-3 mb-8">
-                        <Layers className="w-8 h-8 text-[#C17A45]" />
+                        <Layers className="w-8 h-8 text-[#DC2626]" />
                         <h2 className="text-3xl font-bold text-foreground">Assembly Components</h2>
                       </div>
                       
@@ -362,17 +362,17 @@ export default function CaseStudy() {
                           onClick={() => setActiveModel(caseStudy?.modelFile || null)}
                           className={`w-full text-left p-6 rounded-xl border-2 transition-all group flex items-center gap-6 ${
                             activeModel === caseStudy.modelFile
-                              ? "bg-[#C17A45]/10 border-[#C17A45] shadow-md"
-                              : "bg-card border-border hover:border-[#C17A45]/50 hover:bg-card/80"
+                              ? "bg-[#DC2626]/10 border-[#DC2626] shadow-md"
+                              : "bg-card border-border hover:border-[#DC2626]/50 hover:bg-card/80"
                           }`}
                         >
                           <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-xl transition-colors ${
-                            activeModel === caseStudy.modelFile ? "bg-[#C17A45] text-white" : "bg-background text-foreground/40 group-hover:text-[#C17A45]"
+                            activeModel === caseStudy.modelFile ? "bg-[#DC2626] text-white" : "bg-background text-foreground/40 group-hover:text-[#DC2626]"
                           }`}>
                             <Box className="w-6 h-6" />
                           </div>
                           <div>
-                            <h3 className="text-xl font-bold text-foreground group-hover:text-[#C17A45] transition-colors">Full Assembly</h3>
+                            <h3 className="text-xl font-bold text-foreground group-hover:text-[#DC2626] transition-colors">Full Assembly</h3>
                             <p className="text-sm text-foreground/60 mt-1">View the complete model</p>
                           </div>
                         </motion.button>
@@ -387,17 +387,17 @@ export default function CaseStudy() {
                             onClick={() => setActiveModel(subpart.modelFile)}
                             className={`w-full text-left p-6 rounded-xl border-2 transition-all group flex items-center gap-6 ${
                               activeModel === subpart.modelFile
-                                ? "bg-[#C17A45]/10 border-[#C17A45] shadow-md"
-                                : "bg-card border-border hover:border-[#C17A45]/50 hover:bg-card/80"
+                                ? "bg-[#DC2626]/10 border-[#DC2626] shadow-md"
+                                : "bg-card border-border hover:border-[#DC2626]/50 hover:bg-card/80"
                             }`}
                           >
                             <div className={`w-12 h-12 rounded-full flex items-center justify-center font-black text-xl transition-colors ${
-                              activeModel === subpart.modelFile ? "bg-[#C17A45] text-white" : "bg-background text-foreground/40 group-hover:text-[#C17A45]"
+                              activeModel === subpart.modelFile ? "bg-[#DC2626] text-white" : "bg-background text-foreground/40 group-hover:text-[#DC2626]"
                             }`}>
                               {idx + 1}
                             </div>
                             <div>
-                              <h3 className="text-xl font-bold text-foreground group-hover:text-[#C17A45] transition-colors">{subpart.name}</h3>
+                              <h3 className="text-xl font-bold text-foreground group-hover:text-[#DC2626] transition-colors">{subpart.name}</h3>
                               <p className="text-sm text-foreground/60 mt-1 font-mono">File: {subpart.modelFile}</p>
                             </div>
                           </motion.button>
@@ -421,7 +421,7 @@ export default function CaseStudy() {
             </p>
             <a
               href="/#contact"
-              className="inline-flex items-center gap-2 bg-[#C17A45] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#B5651D] transition-colors duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-1 transform"
+              className="inline-flex items-center gap-2 bg-[#DC2626] text-white font-bold px-8 py-4 rounded-xl hover:bg-[#B91C1C] transition-colors duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-1 transform"
             >
               Let's Discuss Your Project
             </a>

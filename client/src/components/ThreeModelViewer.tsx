@@ -91,7 +91,7 @@ export default function ThreeModelViewer({ modelUrl }: { modelUrl?: string }) {
         {/* Play / Pause */}
         <button 
           onClick={() => setIsRotating(!isRotating)}
-          className={`p-2 rounded-lg transition-colors tooltip ${isRotating ? 'bg-[#C17A45]/20 text-[#C17A45]' : 'hover:bg-foreground/10 text-foreground/70'}`}
+          className={`p-2 rounded-lg transition-colors tooltip ${isRotating ? 'bg-[#DC2626]/20 text-[#DC2626]' : 'hover:bg-foreground/10 text-foreground/70'}`}
           title={isRotating ? "Pause Auto-Rotation" : "Play Auto-Rotation"}
         >
           {isRotating ? <Pause size={18} /> : <Play size={18} />}
@@ -100,7 +100,7 @@ export default function ThreeModelViewer({ modelUrl }: { modelUrl?: string }) {
         {/* Speed Control */}
         <button 
           onClick={() => setSpeed(s => s === 1.5 ? 0.5 : 1.5)}
-          className={`p-2 rounded-lg transition-colors tooltip ${speed === 0.5 ? 'bg-[#C17A45]/20 text-[#C17A45]' : 'hover:bg-foreground/10 text-foreground/70'}`}
+          className={`p-2 rounded-lg transition-colors tooltip ${speed === 0.5 ? 'bg-[#DC2626]/20 text-[#DC2626]' : 'hover:bg-foreground/10 text-foreground/70'}`}
           title="Toggle Slow Motion"
         >
           <Gauge size={18} />
@@ -111,7 +111,7 @@ export default function ThreeModelViewer({ modelUrl }: { modelUrl?: string }) {
         {/* Pan Mode */}
         <button 
           onClick={() => setPanMode(!panMode)}
-          className={`p-2 rounded-lg transition-colors tooltip ${panMode ? 'bg-[#C17A45]/20 text-[#C17A45]' : 'hover:bg-foreground/10 text-foreground/70'}`}
+          className={`p-2 rounded-lg transition-colors tooltip ${panMode ? 'bg-[#DC2626]/20 text-[#DC2626]' : 'hover:bg-foreground/10 text-foreground/70'}`}
           title={panMode ? "Pan Mode Active (Left Click)" : "Enable Pan Mode"}
         >
           <Hand size={18} />

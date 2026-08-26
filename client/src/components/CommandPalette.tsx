@@ -7,7 +7,7 @@ const commands = [
   {
     id: "about",
     label: "About",
-    description: "Learn about Praveen's background and philosophy",
+    description: "Learn about Krishna's background and philosophy",
     href: "#about",
   },
   {
@@ -76,7 +76,7 @@ export default function CommandPalette() {
       {/* Keyboard Shortcut Button */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-8 right-8 z-40 flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg hover:border-[#C17A45] transition-all duration-200 shadow-lg hover:shadow-xl"
+        className="fixed bottom-8 right-8 z-40 flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg hover:border-[#DC2626] transition-all duration-200 shadow-lg hover:shadow-xl"
       >
         <Search className="w-4 h-4 text-foreground/60" />
         <span className="text-sm text-foreground/60">

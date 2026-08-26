@@ -46,11 +46,11 @@
 
 :root {
   /* Precision Light Theme - Warm Industrial */
-  --primary: #C17A45; /* Burnished Copper */
+  --primary: #DC2626; /* Crimson Red */
   --primary-foreground: #F7F5F1; /* Warm off-white */
-  --sidebar-primary: #C17A45;
+  --sidebar-primary: #DC2626;
   --sidebar-primary-foreground: #F7F5F1;
-  --chart-1: #C17A45;
+  --chart-1: #DC2626;
   --chart-2: #4A5A6A; /* Muted steel-blue */
   --chart-3: #8B7355;
   --chart-4: #D4A574;
@@ -66,26 +66,26 @@
   --secondary-foreground: #4A5A6A;
   --muted: #D8D3C9;
   --muted-foreground: #6B6B6F;
-  --accent: #C17A45; /* Burnished Copper */
+  --accent: #DC2626; /* Crimson Red */
   --accent-foreground: #F7F5F1;
   --destructive: #C1563F;
   --destructive-foreground: #F7F5F1;
   --border: #D8D3C9; /* Fine hairline */
   --input: #EDEAE4;
-  --ring: #C17A45;
+  --ring: #DC2626;
   --sidebar: #F7F5F1;
   --sidebar-foreground: #1C1C1E;
-  --sidebar-accent: #C17A45;
+  --sidebar-accent: #DC2626;
   --sidebar-accent-foreground: #F7F5F1;
   --sidebar-border: #D8D3C9;
-  --sidebar-ring: #C17A45;
+  --sidebar-ring: #DC2626;
 }
 
 .dark {
-  /* Precision Light Dark Mode - Deep graphite with warm accents */
-  --primary: #C17A45; /* Burnished Copper */
+  /* Precision Light Dark Mode - Deep graphite with red accents */
+  --primary: #DC2626; /* Crimson Red */
   --primary-foreground: #121212; /* Deep graphite */
-  --sidebar-primary: #C17A45;
+  --sidebar-primary: #DC2626;
   --sidebar-primary-foreground: #F0EDE6;
   --background: #121212; /* Deep graphite */
   --foreground: #F0EDE6; /* Warm cream */
@@ -97,24 +97,24 @@
   --secondary-foreground: #B8B5AF;
   --muted: #2A2A2C;
   --muted-foreground: #8B8885;
-  --accent: #C17A45; /* Burnished Copper */
+  --accent: #DC2626; /* Crimson Red */
   --accent-foreground: #121212;
   --destructive: #E8704A;
   --destructive-foreground: #121212;
   --border: #2A2A2C;
   --input: #2A2A2C;
-  --ring: #C17A45;
-  --chart-1: #C17A45;
+  --ring: #DC2626;
+  --chart-1: #DC2626;
   --chart-2: #7BA3B8;
   --chart-3: #A0704D;
   --chart-4: #D4A574;
   --chart-5: #8B7355;
   --sidebar: #1A1A1C;
   --sidebar-foreground: #F0EDE6;
-  --sidebar-accent: #C17A45;
+  --sidebar-accent: #DC2626;
   --sidebar-accent-foreground: #121212;
   --sidebar-border: #2A2A2C;
-  --sidebar-ring: #C17A45;
+  --sidebar-ring: #DC2626;
 }
 
 @layer base {
@@ -209,9 +209,9 @@
     }
   }
 
-  /* Precision Light: Copper CTA buttons */
+  /* Precision Light: Red CTA buttons */
   .btn-copper {
-    @apply bg-[#C17A45] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#B5651D] transition-all duration-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95;
+    @apply bg-[#DC2626] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#B91C1C] transition-all duration-200 shadow-sm hover:shadow-md hover:scale-105 active:scale-95;
   }
 
   /* Smooth transitions for all interactive elements */
@@ -239,12 +239,12 @@
 
   /* Smooth focus states */
   input:focus, textarea:focus, select:focus {
-    @apply ring-2 ring-[#C17A45]/20;
+    @apply ring-2 ring-[#DC2626]/20;
   }
 
-  /* Copper accent hover */
+  /* Red accent hover */
   .text-copper-hover:hover {
-    @apply text-[#C17A45] transition-colors duration-200;
+    @apply text-[#DC2626] transition-colors duration-200;
   }
 
   /* Micro-interactions: Press down effect */
@@ -254,7 +254,7 @@
 
   /* Micro-interactions: Soft Hover Glow */
   .hover-glow {
-    @apply hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(193,122,69,0.3)] transition-all duration-300;
+    @apply hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all duration-300;
   }
 
   /* Micro-interactions: Form Error Shake */

@@ -42,11 +42,11 @@ export default function Header() {
           >
             <img
               src={`${import.meta.env.BASE_URL}manus-storage/logo_14583197.png`}
-              alt="Praveen Kashyap"
+              alt="Krishna Kumar"
               className="w-8 h-8"
             />
             <span className="hidden sm:inline font-semibold text-foreground">
-              Praveen Kashyap
+              Krishna Kumar
             </span>
           </a>
         </div>

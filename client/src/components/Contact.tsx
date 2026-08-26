@@ -27,8 +27,8 @@ export default function Contact() {
         {/* Name Logo */}
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-black italic tracking-tighter uppercase flex justify-center gap-2">
-            <span className="text-foreground drop-shadow-md">PRAVEEN</span>
-            <span className="text-[#C17A45] drop-shadow-md">KASHYAP</span>
+            <span className="text-foreground drop-shadow-md">KRISHNA</span>
+            <span className="text-[#DC2626] drop-shadow-md">KUMAR</span>
           </h2>
           <p className="text-foreground/50 tracking-[0.2em] md:tracking-[0.4em] text-xs md:text-sm font-bold mt-6 uppercase">
             Precision Meets Engineering
@@ -38,30 +38,30 @@ export default function Contact() {
         {/* Contact Pills */}
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-16 w-full max-w-5xl">
           
-          <a href="mailto:sid143pk@gmail.com" className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 hover-glow btn-press">
+          <a href="mailto:Kishansaxena753@gmail.com" className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 hover-glow btn-press">
             <div className="flex items-center justify-center w-8 h-8 rounded-full border border-foreground/20">
               <Mail className="w-4 h-4 text-foreground/70" />
             </div>
-            <span className="text-foreground font-bold text-sm">sid143pk@gmail.com</span>
+            <span className="text-foreground font-bold text-sm">Kishansaxena753@gmail.com</span>
           </a>
 
-          <a href="https://linkedin.com/in/praveen-kashyap-323719251" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 hover-glow btn-press">
+          <a href="https://www.linkedin.com/in/krishna-kumar-6540b9249" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 hover-glow btn-press">
             <div className="flex items-center justify-center w-8 h-8 rounded-full border border-foreground/20">
               <Linkedin className="w-4 h-4 text-foreground/70" />
             </div>
             <span className="text-foreground font-bold text-sm">LinkedIn</span>
           </a>
 
-          <a href="tel:+919795264544" className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 hover-glow btn-press">
+          <a href="tel:+917522035943" className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 hover-glow btn-press">
             <div className="flex items-center justify-center w-8 h-8 rounded-full border border-foreground/20">
               <Phone className="w-4 h-4 text-foreground/70" />
             </div>
-            <span className="text-foreground font-bold text-sm">+91-9795264544</span>
+            <span className="text-foreground font-bold text-sm">+91-7522035943</span>
           </a>
 
           <div className="flex items-center gap-4 bg-background/40 hover:bg-background border border-border/60 rounded-full px-6 py-4 transition-all duration-300 cursor-default hover-glow">
-            <div className="flex items-center justify-center w-8 h-8 rounded-full border border-[#C17A45]/40">
-              <MapPin className="w-4 h-4 text-[#C17A45]" />
+            <div className="flex items-center justify-center w-8 h-8 rounded-full border border-[#DC2626]/40">
+              <MapPin className="w-4 h-4 text-[#DC2626]" />
             </div>
             <span className="text-foreground font-bold text-sm">Faridabad, Haryana</span>
           </div>
@@ -80,14 +80,14 @@ export default function Contact() {
               className={`w-full bg-background/50 border-2 rounded-full py-4 pl-6 pr-16 text-sm font-medium outline-none transition-colors duration-300
                 ${status === 'error' ? 'border-red-500/50 focus:border-red-500' : 
                   status === 'success' ? 'border-green-500/50 focus:border-green-500 text-green-600 dark:text-green-400' : 
-                  'border-border/60 focus:border-[#C17A45]'}`}
+                  'border-border/60 focus:border-[#DC2626]'}`}
             />
             <button 
               type="submit"
               className={`absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center text-white transition-all duration-300 btn-press
                 ${status === 'error' ? 'bg-red-500 hover:bg-red-600' : 
                   status === 'success' ? 'bg-green-500 hover:bg-green-600' : 
-                  'bg-[#C17A45] hover:bg-[#B5651D] hover-glow'}`}
+                  'bg-[#DC2626] hover:bg-[#B91C1C] hover-glow'}`}
             >
               {status === 'error' ? <AlertCircle className="w-4 h-4" /> : 
                status === 'success' ? <CheckCircle2 className="w-4 h-4" /> : 
@@ -102,7 +102,7 @@ export default function Contact() {
         <div className="mt-28 pt-8 w-full text-center relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-border/40 rounded-full"></div>
           <p className="text-foreground/40 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase pt-4">
-            © {currentYear} PRAVEEN KASHYAP . LITTLE FLOWER POLYTECHNIC
+            © {currentYear} KRISHNA KUMAR . PRABHAT ENGINEERING COLLEGE
           </p>
         </div>
 

@@ -60,7 +60,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Featured Projects
           </h2>
-          <div className="w-12 h-1 bg-[#C17A45] rounded-full" />
+          <div className="w-12 h-1 bg-[#DC2626] rounded-full" />
           <p className="text-foreground/60 mt-4 max-w-2xl">
             A selection of precision engineering and mechanical design projects.
           </p>
@@ -68,7 +68,7 @@ export default function Projects() {
 
         {loading ? (
           <div className="flex justify-center items-center h-48">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#C17A45]"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DC2626]"></div>
           </div>
         ) : (
           <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
@@ -77,10 +77,10 @@ export default function Projects() {
               <Link
                 href={`/case-study/${project.id}`}
                 key={project.id}
-                className="block group bg-card/90 backdrop-blur-md border border-border rounded-xl overflow-hidden hover:border-[#C17A45] hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 min-w-[280px] md:min-w-[340px] max-w-[340px] flex-shrink-0 snap-start hide-scrollbar btn-press"
+                className="block group bg-card/90 backdrop-blur-md border border-border rounded-xl overflow-hidden hover:border-[#DC2626] hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 min-w-[280px] md:min-w-[340px] max-w-[340px] flex-shrink-0 snap-start hide-scrollbar btn-press"
               >
                 {/* Placeholder or Rendered Image */}
-                <div className="relative h-72 bg-gradient-to-br from-[#C17A45]/5 to-[#4A5A6A]/10 flex items-center justify-center overflow-hidden border-b border-border/50">
+                <div className="relative h-72 bg-gradient-to-br from-[#DC2626]/5 to-[#4A5A6A]/10 flex items-center justify-center overflow-hidden border-b border-border/50">
                   {project.image ? (
                     <img src={project.image.startsWith('/') ? `${import.meta.env.BASE_URL}${project.image.slice(1)}` : project.image} alt={project.title} className="w-full h-full object-contain p-4 drop-shadow-xl group-hover:scale-110 transition-transform duration-500" />
                   ) : (
@@ -89,9 +89,9 @@ export default function Projects() {
                   
                   {!project.image && (
                     <div className="text-center space-y-2 relative z-10">
-                      <div className="w-16 h-16 mx-auto bg-[#C17A45]/20 rounded-lg flex items-center justify-center border border-[#C17A45]/30 group-hover:border-[#C17A45] transition-colors">
+                      <div className="w-16 h-16 mx-auto bg-[#DC2626]/20 rounded-lg flex items-center justify-center border border-[#DC2626]/30 group-hover:border-[#DC2626] transition-colors">
                         <svg
-                           className="w-8 h-8 text-[#C17A45]"
+                           className="w-8 h-8 text-[#DC2626]"
                            fill="none"
                            stroke="currentColor"
                            viewBox="0 0 24 24"
@@ -115,7 +115,7 @@ export default function Projects() {
                 <div className="p-6 space-y-4">
                   {/* Category Badge & Like Button */}
                   <div className="flex items-center justify-between">
-                    <span className="inline-block px-3 py-1 bg-[#C17A45]/10 text-[#C17A45] text-xs font-semibold rounded-full">
+                    <span className="inline-block px-3 py-1 bg-[#DC2626]/10 text-[#DC2626] text-xs font-semibold rounded-full">
                       {project.category}
                     </span>
                     <div className="flex items-center gap-3">
@@ -169,7 +169,7 @@ export default function Projects() {
                       {project.metrics?.map((metric) => (
                         <span
                           key={metric}
-                          className="text-xs font-semibold text-[#C17A45]"
+                          className="text-xs font-semibold text-[#DC2626]"
                         >
                           {metric}
                         </span>
@@ -189,7 +189,7 @@ export default function Projects() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-[#C17A45] text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-md hover-glow btn-press"
+            className="inline-flex items-center gap-2 bg-[#DC2626] text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-md hover-glow btn-press"
           >
             Let's Talk
             <ArrowUpRight className="w-4 h-4" />

@@ -39,14 +39,14 @@ export default function Software() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Software Expertise
           </h2>
-          <div className="w-12 h-1 bg-[#C17A45] rounded-full" />
+          <div className="w-12 h-1 bg-[#DC2626] rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {softwareTools.map((tool) => (
             <div
               key={tool.name}
-              className="bg-background border border-border rounded-lg p-8 hover:shadow-lg transition-all duration-200 hover:border-[#C17A45]/50"
+              className="bg-background border border-border rounded-lg p-8 hover:shadow-lg transition-all duration-200 hover:border-[#DC2626]/50"
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-6">
@@ -54,7 +54,7 @@ export default function Software() {
                   <h3 className="text-2xl font-bold text-foreground">
                     {tool.name}
                   </h3>
-                  <p className="text-sm font-medium text-[#C17A45] mt-1">
+                  <p className="text-sm font-medium text-[#DC2626] mt-1">
                     {tool.level}
                   </p>
                 </div>
@@ -71,7 +71,7 @@ export default function Software() {
                   {tool.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 bg-card border border-border rounded-full text-xs font-medium text-foreground/70 hover:text-[#C17A45] transition-colors"
+                      className="px-3 py-1 bg-card border border-border rounded-full text-xs font-medium text-foreground/70 hover:text-[#DC2626] transition-colors"
                     >
                       {skill}
                     </span>

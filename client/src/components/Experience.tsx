@@ -4,46 +4,48 @@ import { useState } from "react";
 const experiences = [
   {
     id: 1,
-    title: "Design Engineer",
+    title: "Jr. Design Engineer",
     company: "Usaka Engineers",
-    period: "March 2025 – Present",
+    period: "Feb 2026 – Present",
     location: "Faridabad, Haryana",
     achievements: [
-      "Developing 3D CAD models and 2D drawings in SolidWorks, AutoCAD, and CATIA V5 per client specs",
-      "Designing welding fixtures and checking gauges compliant with GD&T standards",
-      "Coordinating with tool room during fixture/gauge manufacturing and try-out",
-      "Resolving production and inspection issues via design changes",
-      "Maintaining design files, revision history, and BOMs for full traceability",
+      "Develop 3D CAD models and 2D drawings using SolidWorks & AutoCAD per client specifications",
+      "Design welding fixtures and checking gauges compliant with component drawings and GD&T standards",
+      "Coordinate with tool room during fixture and gauge manufacturing and try-out phases",
+      "Design and development of Sheet Metal Bending Tools for accurate and repeatable forming operations",
+      "Work on Blanking Tool design, including strip layout, punch, die, and die-set",
+      "Develop Blanking and Bending Press Tools using SolidWorks with progressive die strip layouts",
+      "Maintain organized design files, revision history, and BOMs for full project traceability",
     ],
-    technologies: ["SolidWorks", "AutoCAD", "CATIA V5", "GD&T", "PPAP"],
+    technologies: ["SolidWorks", "AutoCAD", "Welding Fixtures", "Checking Gauges", "Bending Tools", "Blanking Tools", "GD&T", "PPAP", "BOM"],
   },
   {
     id: 2,
-    title: "Design Engineer",
+    title: "Jr. Design Engineer",
     company: "Jayem Auto Industries Pvt. Ltd.",
-    period: "July 2022 – March 2025",
+    period: "Sep 2024 – Feb 2026 (1 Yr 6 Mos)",
     location: "Faridabad, Haryana",
     achievements: [
-      "Designed pipeline and hose assembly components (SolidWorks, AutoCAD) to GD&T-compliant accuracy",
-      "Led new tooling development from concept to production",
-      "Created/updated 2D drawings and BOMs for new and revised product variants",
-      "Drove 5S, Kaizen, and quality improvement initiatives on the shop floor",
-      "Collaborated cross-functionally for design feasibility review and approval",
+      "Specialized in pipe bending process and coordinate knowledge for automotive assemblies",
+      "Designed pipe bending components and assemblies as per customer requirements",
+      "Developed and modified checking gauges for quality inspection of bent components",
+      "Applied GD&T tolerances and manufacturing standards in 3D design & 2D detailing",
     ],
-    technologies: ["SolidWorks", "AutoCAD", "GD&T", "5S", "Kaizen"],
+    technologies: ["SolidWorks", "AutoCAD", "Pipe Bending", "Checking Gauges", "GD&T Standards"],
   },
   {
     id: 3,
-    title: "Design Engineer Trainee",
-    company: "Tenneco Automotive India Pvt. Ltd.",
-    period: "July 2021 – July 2022",
-    location: "Faridabad, Haryana",
+    title: "Machine Operator (Trainee)",
+    company: "Sona BLW Precision Forging India Ltd.",
+    period: "Aug 2022 – Sep 2024 (2 Yrs 1 Mo)",
+    location: "Manesar, Gurugram",
     achievements: [
-      "Trained at a U.S.-based Tier 1 automotive supplier (Clean Air, Powertrain, DRIV divisions)",
-      "Used Vernier calipers, micrometers, and height gauges for dimensional inspection",
-      "Applied root cause analysis to reduce in-house failures and improve throughput",
+      "Operated CNC and VMC machines for high-precision machining of automotive production components",
+      "Performed machine setup, job changeovers, tool offset corrections, and quality inspection",
+      "Hands-on expertise with measuring instruments including Vernier, Micrometer, Height Gauge, Filler Gauge, and Dial Gauge",
+      "Maintained 5S, Kaizen, and manufacturing process optimization on the shop floor",
     ],
-    technologies: ["Dimensional Inspection", "RCA", "Quality Control"],
+    technologies: ["CNC Machine", "VMC Machine", "Precision Machining", "Vernier/Micrometer", "Tool Offset", "5S & Kaizen"],
   },
 ];
 
@@ -57,7 +59,7 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Experience
           </h2>
-          <div className="w-12 h-1 bg-[#C17A45] rounded-full" />
+          <div className="w-12 h-1 bg-[#DC2626] rounded-full" />
         </div>
 
         <div className="space-y-6">
@@ -68,16 +70,16 @@ export default function Experience() {
             >
               {/* Timeline line */}
               {idx < experiences.length - 1 && (
-                <div className="absolute left-6 top-20 w-0.5 h-24 bg-gradient-to-b from-[#C17A45] to-border hidden md:block" />
+                <div className="absolute left-6 top-20 w-0.5 h-24 bg-gradient-to-b from-[#DC2626] to-border hidden md:block" />
               )}
 
               {/* Timeline dot */}
-              <div className="absolute left-0 top-6 w-12 h-12 bg-background border-2 border-[#C17A45] rounded-full flex items-center justify-center hidden md:flex">
-                <div className="w-3 h-3 bg-[#C17A45] rounded-full" />
+              <div className="absolute left-0 top-6 w-12 h-12 bg-background border-2 border-[#DC2626] rounded-full flex items-center justify-center hidden md:flex">
+                <div className="w-3 h-3 bg-[#DC2626] rounded-full" />
               </div>
 
               {/* Card */}
-              <div className="md:ml-24 bg-card border border-border rounded-lg overflow-hidden hover:border-[#C17A45]/50 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
+              <div className="md:ml-24 bg-card border border-border rounded-lg overflow-hidden hover:border-[#DC2626]/50 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300">
                 <button
                   onClick={() =>
                     setExpandedId(expandedId === exp.id ? null : exp.id)
@@ -89,7 +91,7 @@ export default function Experience() {
                       <h3 className="text-xl font-bold text-foreground">
                         {exp.title}
                       </h3>
-                      <p className="text-[#C17A45] font-semibold mt-1">
+                      <p className="text-[#DC2626] font-semibold mt-1">
                         {exp.company}
                       </p>
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-2 text-sm text-foreground/90 font-medium">
@@ -120,7 +122,7 @@ export default function Experience() {
                             key={i}
                             className="flex gap-3 text-sm text-foreground/90 font-medium"
                           >
-                            <span className="text-[#C17A45] font-bold mt-0.5">
+                            <span className="text-[#DC2626] font-bold mt-0.5">
                               ✓
                             </span>
                             <span>{achievement}</span>

@@ -10,16 +10,16 @@ export default function About() {
           <div className="space-y-10 lg:sticky lg:top-32 self-start">
             <div>
               <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter uppercase text-foreground mb-4">
-                Engineering <span className="text-[#C17A45]">Mission</span>
+                Engineering <span className="text-[#DC2626]">Mission</span>
               </h2>
-              <div className="w-12 h-1 bg-[#C17A45] rounded-full" />
+              <div className="w-12 h-1 bg-[#DC2626] rounded-full" />
             </div>
 
             <div className="space-y-8">
               <div className="flex gap-4 group">
                 <div className="shrink-0 mt-1">
-                  <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center group-hover:border-[#C17A45]/50 group-hover:bg-[#C17A45]/10 transition-all duration-300">
-                    <Crosshair className="w-6 h-6 text-[#C17A45]" />
+                  <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center group-hover:border-[#DC2626]/50 group-hover:bg-[#DC2626]/10 transition-all duration-300">
+                    <Crosshair className="w-6 h-6 text-[#DC2626]" />
                   </div>
                 </div>
                 <div>
@@ -32,8 +32,8 @@ export default function About() {
 
               <div className="flex gap-4 group">
                 <div className="shrink-0 mt-1">
-                  <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center group-hover:border-[#C17A45]/50 group-hover:bg-[#C17A45]/10 transition-all duration-300">
-                    <Cpu className="w-6 h-6 text-[#C17A45]" />
+                  <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center group-hover:border-[#DC2626]/50 group-hover:bg-[#DC2626]/10 transition-all duration-300">
+                    <Cpu className="w-6 h-6 text-[#DC2626]" />
                   </div>
                 </div>
                 <div>
@@ -46,8 +46,8 @@ export default function About() {
 
               <div className="flex gap-4 group">
                 <div className="shrink-0 mt-1">
-                  <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center group-hover:border-[#C17A45]/50 group-hover:bg-[#C17A45]/10 transition-all duration-300">
-                    <Settings2 className="w-6 h-6 text-[#C17A45]" />
+                  <div className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center group-hover:border-[#DC2626]/50 group-hover:bg-[#DC2626]/10 transition-all duration-300">
+                    <Settings2 className="w-6 h-6 text-[#DC2626]" />
                   </div>
                 </div>
                 <div>
@@ -63,30 +63,30 @@ export default function About() {
           {/* Right: Technical Parameters Spec Sheet */}
           <div className="relative">
             {/* Decorative background accent */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#C17A45]/10 to-transparent blur-3xl -z-10 rounded-full scale-90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#DC2626]/10 to-transparent blur-3xl -z-10 rounded-full scale-90" />
             
             <div className="bg-card/60 backdrop-blur-md border border-border/60 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#C17A45]/10 rounded-bl-full pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#DC2626]/10 rounded-bl-full pointer-events-none" />
               
               <div className="flex items-center justify-between border-b border-border/50 pb-6 mb-8">
                 <h3 className="text-2xl font-black text-foreground uppercase tracking-widest">
                   Technical Specs
                 </h3>
-                <span className="text-[#C17A45] font-mono text-xs font-bold tracking-widest bg-[#C17A45]/10 px-3 py-1 rounded-full">
+                <span className="text-[#DC2626] font-mono text-xs font-bold tracking-widest bg-[#DC2626]/10 px-3 py-1 rounded-full">
                   SYS. V1.0
                 </span>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
                 {[
-                  { cat: "Design & Modeling", items: ["3D/2D CAD Modeling", "Welding Fixtures", "Checking Gauges", "Parametric & Surface"] },
-                  { cat: "Quality & Analysis", items: ["GD&T (ASME Y14.5)", "Tolerance Stack-up", "Root Cause Analysis", "Reverse Engineering"] },
-                  { cat: "Manufacturing", items: ["PPAP & Control Plan", "New Tooling Dev.", "5S & Kaizen", "DFM / DFA"] },
-                  { cat: "Soft Skills", items: ["Cross-functional Sync", "Vendor Management", "Project Lifecycle", "Rapid Prototyping"] }
+                  { cat: "Design & Modeling", items: ["SolidWorks (Advanced)", "AutoCAD (Proficient)", "Siemens NX (Intermediate)", "Welding Fixture Design"] },
+                  { cat: "Tooling & Development", items: ["Checking Gauge Design", "Press Tools (Blanking & Bending)", "Strip Layouts & Die-set", "New Tooling Development"] },
+                  { cat: "Quality & Standards", items: ["GD&T Compliance", "PPAP & Control Plans", "Precision Measurement (Vernier/Micrometer)", "BOM & Technical Drafting"] },
+                  { cat: "Manufacturing", items: ["CNC & VMC Machine Operation", "Pipe Bending Process", "5S, Kaizen & Process Improvement", "Tool Room & Try-out Coordination"] }
                 ].map((group) => (
                   <div key={group.cat}>
-                    <h4 className="text-xs font-bold text-[#C17A45] uppercase tracking-wider mb-4 flex items-center gap-2">
-                      <div className="w-2 h-2 bg-[#C17A45] rotate-45" />
+                    <h4 className="text-xs font-bold text-[#DC2626] uppercase tracking-wider mb-4 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-[#DC2626] rotate-45" />
                       {group.cat}
                     </h4>
                     <ul className="space-y-3">

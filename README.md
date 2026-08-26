@@ -1,6 +1,6 @@
 # Mechanical Design Engineer Portfolio
 
-Welcome to the Praveen Kashyap Portfolio source code. This is a high-performance, React-based web application with native 3D WebGL rendering (Three.js), designed specifically for mechanical and CAD engineers to showcase their work interactively.
+Welcome to the Krishna Kumar Portfolio source code. This is a high-performance, React-based web application with native 3D WebGL rendering (Three.js), designed specifically for mechanical and CAD engineers to showcase their work interactively.
 
 This guide will teach you exactly how to update your models, edit text, and manage your projects without needing to touch any complex code.
 
@@ -12,10 +12,9 @@ These are hardcoded links inside the source code. **Whenever your profile URL ch
 
 | Link | Current Value | File to Edit |
 |------|--------------|--------------|
-| **LinkedIn Profile** | `https://linkedin.com/in/praveen-kashyap-323719251` | `client/src/components/Hero.tsx` and `client/src/components/Contact.tsx` |
-| **GitHub Profile** | `https://github.com/Wrect` | `client/src/components/Hero.tsx` and `client/src/components/Contact.tsx` |
-| **Email Address** | `sid143pk@gmail.com` | `client/src/components/Contact.tsx` |
-| **Phone Number** | `+91-9795264544` | `client/src/components/Contact.tsx` |
+| **LinkedIn Profile** | `https://www.linkedin.com/in/krishna-kumar-6540b9249` | `client/src/components/Hero.tsx`, `client/src/components/Contact.tsx`, and `client/src/components/Footer.tsx` |
+| **Email Address** | `Kishansaxena753@gmail.com` | `client/src/components/Hero.tsx`, `client/src/components/Contact.tsx`, and `client/src/components/Footer.tsx` |
+| **Phone Number** | `+91-7522035943` | `client/src/components/Contact.tsx` |
 | **Resume / CV** | `client/public/resume.pdf` | Replace the file at this path |
 | **Profile Photo** | `client/public/profile.png` | Replace the file at this path |
 
