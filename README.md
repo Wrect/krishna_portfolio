@@ -1,151 +1,242 @@
-# Mechanical Design Engineer Portfolio
+# 🏗️ Krishna Kumar — Mechanical Design Engineer Portfolio
 
-Welcome to the Krishna Kumar Portfolio source code. This is a high-performance, React-based web application with native 3D WebGL rendering (Three.js), designed specifically for mechanical and CAD engineers to showcase their work interactively.
+Welcome! This is your personal portfolio website. It shows off your engineering work with cool 3D models that people can spin around right in their browser.
 
-This guide will teach you exactly how to update your models, edit text, and manage your projects without needing to touch any complex code.
-
----
-
-## 🔗 Personal Links — Keep These Updated!
-
-These are hardcoded links inside the source code. **Whenever your profile URL changes, update them here.**
-
-| Link | Current Value | File to Edit |
-|------|--------------|--------------|
-| **LinkedIn Profile** | `https://www.linkedin.com/in/krishna-kumar-6540b9249` | `client/src/components/Hero.tsx`, `client/src/components/Contact.tsx`, and `client/src/components/Footer.tsx` |
-| **Email Address** | `Kishansaxena753@gmail.com` | `client/src/components/Hero.tsx`, `client/src/components/Contact.tsx`, and `client/src/components/Footer.tsx` |
-| **Phone Number** | `+91-7522035943` | `client/src/components/Contact.tsx` |
-| **Resume / CV** | `client/public/resume.pdf` | Replace the file at this path |
-| **Profile Photo** | `client/public/profile.png` | Replace the file at this path |
-
-> **Tip:** To find and replace a link globally, press `Ctrl+Shift+H` in VS Code and search for the old URL.
+🌐 **Your Live Website:** [https://wrect.github.io/krishna_portfolio/](https://wrect.github.io/krishna_portfolio/)
 
 ---
 
-## 📂 Data Architecture (Where things live)
+## 🔗 Your Personal Links
 
-All of the data that powers the website (Images, JSON files, and 3D STL Models) lives inside the **`client/public/`** folder. The website dynamically reads from these folders to render everything.
+These links appear on your website. If any of them ever change, you need to update them in these files:
 
-```text
+| What | Current Value | Where to Change It |
+|------|---------------|--------------------|
+| **LinkedIn** | `https://www.linkedin.com/in/krishna-kumar-6540b9249` | `client/src/components/Hero.tsx`, `Contact.tsx`, `Footer.tsx` |
+| **Email** | `Kishansaxena753@gmail.com` | `Hero.tsx`, `Contact.tsx`, `Footer.tsx` |
+| **Phone** | `+91-7522035943` | `Contact.tsx` |
+| **Resume PDF** | `client/public/resume.pdf` | Just replace this file with your new PDF |
+| **Profile Photo** | `client/public/profile.png` | Just replace this file with your new photo |
+
+> 💡 **Easy trick:** In VS Code, press `Ctrl+Shift+H` to search and replace text across ALL files at once.
+
+---
+
+## 📂 Where Everything Lives
+
+Think of your website like a filing cabinet. All the important stuff is inside the `client/public/` folder:
+
+```
 client/public/
 │
-├── introduction_model/        <-- The 3D model shown on the very front page (Hero section)
-│   └── intro.STL              
+├── profile.png              ← Your face! The photo on the front page.
+├── resume.pdf               ← The PDF people download when they click "Download CV"
 │
-├── profile.png                <-- Your profile picture on the front page
-├── resume.pdf                 <-- The resume downloaded when clicking "Download Resume"
+├── introduction_model/
+│   └── intro.STL            ← The 3D model that spins on the front page
 │
-└── projects/                  <-- Where ALL your case studies live
-    ├── 1/                     <-- Folder for Project #1
+└── projects/                ← All your projects live here
+    ├── 1/                   ← Project #1
     │   ├── images/
-    │   │   └── 1_img.png      <-- Thumbnail image for Project #1
+    │   │   └── 1_img.png    ← The little preview picture for Project #1
     │   ├── json/
-    │   │   └── 1.json         <-- The text, details, and subpart configuration for Project #1
+    │   │   └── 1.json       ← All the text/details for Project #1
     │   └── models/
-    │       ├── 1.STL          <-- The main assembly CAD model
-    │       ├── 1.1.STL        <-- Subpart model (e.g. Clamping Unit)
-    │       └── 1.2.STL        <-- Subpart model (e.g. Base Frame)
+    │       ├── 1.STL        ← The main 3D model
+    │       ├── 1.1.STL      ← A sub-part (like just the base)
+    │       └── 1.2.STL      ← Another sub-part
     │
-    ├── 2/                     <-- Folder for Project #2
-    └── 3/                     <-- Folder for Project #3
+    ├── 2/                   ← Project #2 (same structure)
+    └── 3/                   ← Project #3 (same structure)
 ```
 
 ---
 
-## 🛠️ How to Edit or Add a Project
+# 🍼 Super Easy Guide: How to Edit Your Website (Zero Coding Knowledge Needed!)
 
-To edit an existing project, or add a brand new one, simply manipulate the folders inside `client/public/projects/`. 
+Don't worry — you do NOT need to know how to code. Think of it like editing a Word document. Follow the steps below like a recipe. 🍳
 
-### Step 1: The JSON File (Text and Details)
-Navigate to `client/public/projects/1/json/1.json`. This file controls the title, description, and all the text shown on the right side of the Case Study page. 
+---
 
-You can edit this file in any text editor. It looks like this:
+## ✏️ Step 1: Change Your Profile Photo
+
+**What you need:** A new photo of yourself (`.png` or `.jpg`)
+
+1. Find the file `client/public/profile.png` on your computer.
+2. Delete it (or rename it to `profile_old.png` if you want to keep a backup).
+3. Put your new photo in the exact same spot and name it **`profile.png`**.
+4. That's it! 🎉
+
+---
+
+## 📄 Step 2: Change Your Resume PDF
+
+1. Find the file `client/public/resume.pdf`.
+2. Delete it.
+3. Put your new resume PDF in the same spot and name it **`resume.pdf`**.
+4. Done! When people click "Download CV" on your website, they'll get your new resume.
+
+---
+
+## 🔧 Step 3: Edit a Project's Text and Details
+
+Each project has a tiny text file (called a `.json` file) that controls ALL the words on that project's page.
+
+**To edit Project #1:**
+
+1. Open the file: `client/public/projects/1/json/1.json`
+2. You can open it with **Notepad**, **VS Code**, or any text editor.
+3. You'll see something like this:
+
 ```json
 {
   "title": "Welding Fixture Assembly",
   "category": "Fixture Design",
   "industry": "Automotive",
-  "difficulty": "Advanced",
-  "description": "Short summary of the project.",
+  "description": "A short summary of your project goes here.",
   "modelFile": "1.STL",
-  "image": "/projects/1/images/1_img.png",
-  "sections": [
-    {
-      "title": "Objective",
-      "content": "Design a highly accurate welding fixture..."
-    }
-  ],
-  "subparts": [
-    {
-      "id": "sub1",
-      "name": "Base Fixture Frame",
-      "modelFile": "1.1.STL"
-    }
-  ]
+  "image": "/projects/1/images/1_img.png"
 }
 ```
 
-### Step 2: Adding Subparts for the "View Subparts" Animation
-If your project has sub-assemblies that you want to show when the user clicks **"View Subparts"**, you must:
-1. Export your sub-assemblies as **`.STL`** files.
-2. Place them in the `client/public/projects/1/models/` folder and name them sequentially (`1.1.STL`, `1.2.STL`, etc.).
-3. Open your `1.json` file and add them to the `"subparts"` array exactly as shown in the example above. The `"name"` is what the button will say, and `"modelFile"` tells the website which file to load.
-
-### Step 3: Changing the 3D Model
-The 3D engine only accepts **`.STL`** files. 
-- **Main Assembly:** Place your main `.STL` file in `client/public/projects/1/models/` and name it `1.STL`.
-- **Hero/Front Page Model:** Replace the `intro.STL` file located in `client/public/introduction_model/`.
-
-*Note: Ensure your STL files are exported in "Binary" format rather than "ASCII" to keep file sizes small and loading times blazing fast.*
-
-### Step 4: Changing the Thumbnail Image
-Replace the image in `client/public/projects/1/images/1_img.png`. This is the image that shows up on the horizontally scrolling list on the home page.
+4. Change the words inside the `" "` quotes. For example, change `"Welding Fixture Assembly"` to `"My New Project Name"`.
+5. **⚠️ Important rules:**
+   - DON'T delete the `{ }` curly brackets.
+   - DON'T delete the commas `,` between lines.
+   - DON'T delete the `" "` quote marks around words.
+   - Only change the text INSIDE the quotes.
+6. Save the file. ✅
 
 ---
 
-## 🚀 How to Add a Completely New Project (Project 4)
+## 🖼️ Step 4: Change a Project's Preview Image
 
-If you want to add a 4th project:
-1. Create a new folder named `4` inside `client/public/projects/`.
-2. Inside `4`, create three folders: `images`, `json`, and `models`.
-3. Copy the `1.json` file into `4/json/` and rename it to `4.json`. Edit the text to match your new project.
-4. Add your thumbnail image as `4/images/4_img.png`.
-5. Add your `.STL` files into `4/models/`.
+The preview image is the picture people see on the homepage when scrolling through projects.
 
-The website automatically scans folders sequentially (1, 2, 3, 4...) and will instantly detect and add Project 4 to the homepage.
+1. Go to `client/public/projects/1/images/`.
+2. Delete the old `1_img.png`.
+3. Put your new image in the same folder and name it **`1_img.png`**.
 
 ---
 
-## 💻 Development Commands
+## 🎮 Step 5: Change a Project's 3D Model
 
-If you need to run the website locally on your computer to test your new models before publishing them:
+The 3D model is the spinning thing people can rotate on the project page!
 
-**Start the Local Server:**
+1. Export your CAD model from CATIA/SolidWorks as an **`.STL`** file (choose **Binary** format, not ASCII — it's faster).
+2. Go to `client/public/projects/1/models/`.
+3. Delete the old `1.STL`.
+4. Put your new STL file there and name it **`1.STL`**.
+
+**Want to change the front page spinning model?**
+- Replace `client/public/introduction_model/intro.STL` with your new file.
+
+---
+
+## ➕ Step 6: Add a Brand New Project (e.g., Project #4)
+
+1. Go to the `client/public/projects/` folder.
+2. Create a new folder called **`4`**.
+3. Inside the `4` folder, create three sub-folders: **`images`**, **`json`**, and **`models`**.
+4. Copy the file `1.json` from `projects/1/json/` into your new `projects/4/json/` folder.
+5. Rename the copy to **`4.json`**.
+6. Open `4.json` and change all the text to describe your new project.
+7. Change `"modelFile": "1.STL"` to `"modelFile": "4.STL"`.
+8. Change `"image": "/projects/1/images/1_img.png"` to `"image": "/projects/4/images/4_img.png"`.
+9. Put your preview image in `projects/4/images/4_img.png`.
+10. Put your 3D model in `projects/4/models/4.STL`.
+
+The website will **automatically** detect and show your new project! 🚀
+
+---
+
+# 🌐 How to Put Your Changes on the Live Website (Deploy)
+
+After you make any changes, you need to "push" them to GitHub so the website updates. Here's how:
+
+### First Time Setup (Only do this ONCE)
+
+1. **Download and install Git:** [https://git-scm.com/downloads](https://git-scm.com/downloads) — just click Next → Next → Install.
+2. **Download and install Node.js:** [https://nodejs.org](https://nodejs.org) — pick the green "LTS" button. Click Next → Next → Install.
+3. **Download and install VS Code:** [https://code.visualstudio.com](https://code.visualstudio.com) — this is a free text editor.
+
+### Every Time You Want to Update the Website
+
+1. **Open VS Code**.
+2. Click **Terminal** in the top menu → click **New Terminal**. A black box appears at the bottom.
+3. Type these commands one by one, pressing **Enter** after each:
+
+```bash
+git add .
+```
+> ☝️ This tells Git: "Hey, I changed some files!"
+
+```bash
+git commit -m "Updated my project"
+```
+> ☝️ This saves a snapshot of your changes. You can change the message in the `" "` to whatever you want (like `"New profile photo"` or `"Added project 4"`).
+
+```bash
+git push
+```
+> ☝️ This sends your changes to GitHub. The website will automatically rebuild itself in about 1-2 minutes!
+
+4. **Wait 1-2 minutes**, then refresh your website link: [https://wrect.github.io/krishna_portfolio/](https://wrect.github.io/krishna_portfolio/)
+5. Your changes are live! 🎉🎉🎉
+
+### ⚠️ If `git push` asks for a password:
+- GitHub doesn't use passwords anymore. You need a **token**.
+- Go to [github.com/settings/tokens/new](https://github.com/settings/tokens/new).
+- Give it a name like `my-token`, check the **`repo`** box, scroll down, click **Generate token**.
+- Copy the token (starts with `ghp_...`) and paste it when asked for the password.
+
+---
+
+## 👀 How to Preview Changes Before Publishing
+
+Want to see how your changes look BEFORE putting them on the internet? You can run the website on your own computer:
+
+1. Open VS Code and the Terminal (as described above).
+2. Type:
 ```bash
 npm run dev
 ```
-*(Then click the `http://localhost:5173` link that appears in your terminal)*
-
-**Publish Updates to the Live Website:**
-Once you are happy with the changes you made to the JSON or models, simply run:
-```bash
-git add .
-git commit -m "Updated CAD models"
-git push
-```
-GitHub Actions will automatically build and deploy your changes to your live link.
+3. A link will appear like `http://localhost:5173`. Click it!
+4. Your website opens in your browser — but it's only on YOUR computer, nobody else can see it yet.
+5. Make changes, save files, and the page automatically updates in your browser!
+6. When you're happy, follow the **deploy** steps above to push it live.
 
 ---
 
-## 🎨 Modifying the Theme and UI
-If you ever want to change the text colors, background gradients, or global theme colors, open:
-`client/src/index.css`
+## 🎨 Changing the Theme Color
 
-Inside the `:root` and `.dark` blocks, you will find CSS variables like `--primary: #C17A45;` which controls the copper/orange accent color across the entire website.
+The website currently uses **Crimson Red** (`#DC2626`) as the accent color.
 
-The **default theme is dark**. To change the default back to light, open `client/src/App.tsx` and change `defaultTheme="dark"` to `defaultTheme="light"`.
+If you want to change it (e.g., to blue or green):
+
+1. Open the file: `client/src/index.css`.
+2. Search for `#DC2626` (that's the red color code).
+3. Replace it with a different color code. Here are some examples:
+   - Blue: `#2563EB`
+   - Green: `#16A34A`
+   - Purple: `#9333EA`
+   - Orange: `#EA580C`
+4. You also need to search for `#B91C1C` (the darker red used for hover effects) and replace it with a slightly darker version of your chosen color.
+5. Save the file and deploy!
+
+> 💡 **Find color codes here:** [https://htmlcolorcodes.com](https://htmlcolorcodes.com) — just pick a color and copy the `#` code!
 
 ---
 
 ## 📱 Mobile Support
-The website is fully responsive and works on mobile devices. The navigation bar collapses into a hamburger (☰) menu on small screens. All sections are optimized for mobile viewports.
+
+Your website works on phones and tablets too! The navigation bar turns into a hamburger menu (☰) on small screens, and everything adjusts to fit.
+
+---
+
+## 🆘 Something Broke? Don't Panic!
+
+- **Website shows a blank page?** You probably have a typo in one of the `.json` files. Open it and check that all `{ }`, `" "`, and `,` are in the right places.
+- **3D model not loading?** Make sure the file is `.STL` format and the filename matches what's in the `.json` file.
+- **`git push` gives an error?** Check the "password/token" section above.
+- **Need to undo everything?** Run `git checkout .` in the terminal — this resets ALL your files back to the last saved version.
